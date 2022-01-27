@@ -1,12 +1,11 @@
 const express = require('express');
 const app = express();
-
 const mongoose = require('mongoose');
 
 require('dotenv/config'); //permits access to .env/
 
 const bodyParser = require('body-parser');
-const cors = require('corse')
+const cors = require('cors')
 
 //middelwares -> is it execute each time a route is called
 //app.use(auth);
