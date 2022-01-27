@@ -1,0 +1,10 @@
+https://www.appuntisoftware.it/mongodb-atlas-un-servizio-di-cloud-database/
+clusterName: AppuntiSoftwareCluster
+database username: admin
+database password: admin0
+
+//tutorial seguito:
+https://www.youtube.com/watch?v=vjf774RKrLc&t=1049s
+
+//altro tutorial di supporto:
+https://www.appuntisoftware.it/creiamo-una-rest-api-con-node-js-e-mongodb/
