@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 
 //import routes
 const postsRoute = require('./routes/posts')
+const stationsRoute = require('./routes/stations')
 
 //ROUTES
 app.get('/', (req, res)=> {
@@ -21,6 +22,7 @@ app.get('/', (req, res)=> {
 });
 
 app.use('/posts', postsRoute); 
+app.use('/stations', stationsRoute);
 
 //connect to db
 
