@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "swagger-autogen": "node swagger.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,8 @@
     "express": "^4.17.2",
     "mongodb": "^4.3.1",
     "mongoose": "^6.1.8",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "swagger-autogen": "^2.18.8",
+    "swagger-ui-express": "^4.3.0"
   }
 }

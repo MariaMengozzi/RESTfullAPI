@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+// use for autocreate API documentation
+const swaggerUi = require('swagger-ui-express')
+const swaggerFile = require('./swagger_output.json')
 
 require('dotenv/config'); //permits access to .env/
 
@@ -23,6 +26,8 @@ app.get('/', (req, res)=> {
 
 app.use('/posts', postsRoute); 
 app.use('/stations', stationsRoute);
+
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
 
 //connect to db
 

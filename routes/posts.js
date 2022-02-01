@@ -5,6 +5,8 @@ const Post = require('../models/Post');
 
 //GET ALL THE POSTS
 router.get('/', async (req, res)=>{ //'/posts' can I remove posts  cause I import it
+    // #swagger.tags = ['Post']
+    // #swagger.description = 'Endpoint to get all posts'
     //res.send("we are on posts");
     try {
         const posts = await Post.find(); //return all posts
@@ -17,6 +19,8 @@ router.get('/', async (req, res)=>{ //'/posts' can I remove posts  cause I impor
 
 //SUBMIT A POST
 router.post('/', async (req, res)=>{
+    // #swagger.tags = ['Post']
+    // #swagger.description = 'Endpoint to insert a post'
     //console.log(req.body);
     const post = new Post({
         title: req.body.title,
@@ -43,6 +47,9 @@ router.post('/', async (req, res)=>{
 //SPECIFIC POST
 
 router.get('/:postId', async (req, res)=>{
+    // #swagger.tags = ['Post']
+    // #swagger.description = 'Endpoint to get a specific post'
+    // #swagger.parameters['postId'] = {description: 'ID of a post'}
     try {
         console.log(req.params.postId)
         const post = await Post.findById(req.params.postId);
@@ -55,6 +62,9 @@ router.get('/:postId', async (req, res)=>{
 
 //DELETE A POST
 router.delete('/:postId', async (req, res) => {
+    // #swagger.tags = ['Post']
+    // #swagger.description = 'Endpoint to delete a specific post'
+    // #swagger.parameters['postId'] = {description: 'ID of a post'}
     try {
         const removedPost = await Post.deleteOne({_id:req.params.postId});
         res.status(200).json(removedPost);
@@ -65,6 +75,9 @@ router.delete('/:postId', async (req, res) => {
 
 //UPDATE A POST
 router.patch('/:postId', async (req, res) => {
+    // #swagger.tags = ['Post']
+    // #swagger.description = 'Endpoint to update a specific post'
+    // #swagger.parameters['postId'] = {description: 'ID of a post'}
     try {
         const updatedPost = await Post.updateOne(
             {_id:req.params.postId},

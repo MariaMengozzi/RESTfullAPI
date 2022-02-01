@@ -8,3 +8,6 @@ https://www.youtube.com/watch?v=vjf774RKrLc&t=1049s
 
 //altro tutorial di supporto:
 https://www.appuntisoftware.it/creiamo-una-rest-api-con-node-js-e-mongodb/
+
+//per doc autogenerata:
+https://medium.com/swlh/automatic-api-documentation-in-node-js-using-swagger-dd1ab3c78284
