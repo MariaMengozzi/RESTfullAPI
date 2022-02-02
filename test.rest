@@ -1,0 +1,42 @@
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+    "username": "U1",
+    "password": "p1",
+    "role": {
+        "type": "Admin"
+    }
+}
+
+###
+
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+    "username": "U2",
+    "password": "p2",
+    "role": {
+        "type": "User"
+    }
+}
+
+###
+
+POST http://localhost:3000/user/authenticate
+Content-Type: application/json
+
+{
+    "username": "U2",
+    "password": "p2"
+}
+
+###
+
+GET http://localhost:3000/user/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlUxIiwicm9sZSI6eyJ0eXBlIjoiQWRtaW4ifSwiaWF0IjoxNjQzODM5MjU4fQ.AHFbLLvxuD9i9husm6bAEuaVqKWOoP0_ICSRYhoEfrs
+###
+
+GET http://localhost:3000/user/U2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlUyIiwicm9sZSI6IlVzZXIiLCJpYXQiOjE2NDM4NDAyMTR9.DjiS3eHgtx1rlpFWr5wrjExSZb5UzhzbSf1wvP9TU04

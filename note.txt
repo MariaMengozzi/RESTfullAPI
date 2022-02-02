@@ -11,3 +11,8 @@ https://www.appuntisoftware.it/creiamo-una-rest-api-con-node-js-e-mongodb/
 
 //per doc autogenerata:
 https://medium.com/swlh/automatic-api-documentation-in-node-js-using-swagger-dd1ab3c78284
+
+//role based authorization:
+https://jasonwatmore.com/post/2018/11/28/nodejs-role-based-authorization-tutorial-with-example-api
+corretto con
+https://youtu.be/mbsmsi7l3r4

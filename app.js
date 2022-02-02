@@ -4,9 +4,8 @@ const mongoose = require('mongoose');
 // use for autocreate API documentation
 const swaggerUi = require('swagger-ui-express')
 const swaggerFile = require('./swagger_output.json')
-
+const errorHandler = require('./_helpers/error_handler');
 require('dotenv/config'); //permits access to .env/
-
 const bodyParser = require('body-parser');
 const cors = require('cors')
 
@@ -18,6 +17,7 @@ app.use(bodyParser.json());
 //import routes
 const postsRoute = require('./routes/posts')
 const stationsRoute = require('./routes/stations')
+const usersRoute = require('./routes/users');
 
 //ROUTES
 app.get('/', (req, res)=> {
@@ -26,8 +26,12 @@ app.get('/', (req, res)=> {
 
 app.use('/posts', postsRoute); 
 app.use('/stations', stationsRoute);
+app.use('/user', usersRoute);
 
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+
+// global error handler
+app.use(errorHandler);
 
 //connect to db
 

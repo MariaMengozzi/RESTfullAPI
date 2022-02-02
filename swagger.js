@@ -2,7 +2,7 @@
 const swaggerAutogen = require('swagger-autogen')()
 
 const outputFile = './swagger_output.json'
-const endpointsFiles = ['./routes/stations.js', './routes/posts.js']
+const endpointsFiles = ['./routes/stations.js', './routes/posts.js', './routes/users.js']
 
 const doc = {
     info: {
@@ -22,6 +22,10 @@ const doc = {
         },
         {
             "name": "Station",
+            "description": "Endpoints"
+        },
+        {
+            "name": "User",
             "description": "Endpoints"
         }
     ],
@@ -49,6 +53,11 @@ const doc = {
         Station: {
             $name: "Central Park",
             $location: { type: "Point", coordinates: [ -73.97, 40.77 ] }
+        }, 
+        User: {
+            $username: "username",
+            $password: "password",
+            $role: { type: "Admin", }
         } 
     }
 }
